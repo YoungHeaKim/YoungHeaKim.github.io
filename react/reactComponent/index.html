@@ -108,11 +108,12 @@
     <div class="divider"></div>
 
     <div class="content">
-        <h1 id="React-공부-순서"><a href="#React-공부-순서" class="headerlink" title="React 공부 순서"></a>React 공부 순서</h1><ol>
-<li><a href="./reactbase.md">React 기초</a></li>
-<li><a href="./reactComponent.md">React Props와 State</a></li>
-<li><a href="./reactJSX.md">React JSX</a></li>
-</ol>
+        <h1 id="React-Props-amp-State"><a href="#React-Props-amp-State" class="headerlink" title="React Props &amp; State"></a>React Props &amp; State</h1><h2 id="React-컴포넌트와-전달-속성-props"><a href="#React-컴포넌트와-전달-속성-props" class="headerlink" title="React 컴포넌트와 전달 속성(props)"></a>React 컴포넌트와 전달 속성(props)</h2><ul>
+<li>React 컴포넌트로 props를 전달할 수 있다.<ul>
+<li>상위 컴포넌트에서 하위 컴포넌트로 props를 넘겨주는데 이때 상위에서 데이터를 다음과 같이 전달해 준다.   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; React Component</span><br><span class="line">function MenuListItem(props) &#123;</span><br><span class="line">  return &lt;li&gt;</span><br><span class="line">    &lt;h3&gt;&#123;props.caption&#125;&lt;&#x2F;h3&gt;</span><br><span class="line">  &lt;&#x2F;li&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 위의 컴포넌트를 아래에서 사용</span><br><span class="line">function MenuList() &#123;</span><br><span class="line">  &#x2F;&#x2F; 다음과 같이 Props를 전달해고 위에서처럼 값을 전달 받을수 있다.</span><br><span class="line">  return &lt;ul&gt;</span><br><span class="line">    &lt;MenuListItem caption &#x3D; &quot;props 전달 1&quot; &#x2F;&gt;</span><br><span class="line">    &lt;MenuListItem caption &#x3D; &quot;props 전달 2&quot; &#x2F;&gt; </span><br><span class="line">   &lt;&#x2F;ul&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 위의 컴포넌트를 아래에서 사용</span><br><span class="line">function App() &#123;</span><br><span class="line">  return &lt;main&gt;</span><br><span class="line">    &lt;h2&gt;&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;MenuList&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;main&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
 
     </div>
 

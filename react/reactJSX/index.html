@@ -61,7 +61,7 @@
             
             
             
-            <a class="nav-item" href="/react">React</a>
+            <a class="nav-item" href="/react/index">React</a>
             
             
             
@@ -108,71 +108,7 @@
     <div class="divider"></div>
 
     <div class="content">
-        <h1 id="React-JSX"><a href="#React-JSX" class="headerlink" title="React JSX"></a>React JSX</h1><h2 id="1-React-요소를-만드는-2가지-방법"><a href="#1-React-요소를-만드는-2가지-방법" class="headerlink" title="1. React 요소를 만드는 2가지 방법"></a>1. React 요소를 만드는 2가지 방법</h2><ul>
-<li>JSX란 =&gt; React 요소<ul>
-<li>JSX(JavaScript Syntax eXtension)는 HTML과 유사한 문법을 사용해 React요소(JavaScript 객체)를 만들 수 있도록 한다.</li>
-<li>JavaScript UI view를 구성하는 마크업하는 것은 매우 까다로워 특별한 경우가 아니라면 JSX사용 권장</li>
-<li>JSX가 하는 일은 React 요소(Element)를 만드는 것이다. </li>
-<li><code>React.createElement()</code>를 사용해 UI view를 구성하는 것을 보다 쉽고 간단한 점이 장점이다.</li>
-</ul>
-</li>
-<li><code>JSX</code>와 <code>React.createElement()</code> 사용하는 방법<ul>
-<li><code>JSX</code>가 훨씬 보기 편하고 간단하게 작성 가능 및 가독성이 더 높다.(HTML과 유사)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; JSX</span><br><span class="line">const app &#x3D; (</span><br><span class="line">  &lt;div className&#x3D;&quot;app&quot;&gt;</span><br><span class="line">    &lt;h1&gt;React App&lt;&#x2F;h1&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; ReactElement.createElement()</span><br><span class="line">const appHeading &#x3D; React.createElement(&#39;h1&#39;, &#123;class: &#39;app-title&#39;&#125;, &#39;React.createElement() 메서드&#39;)</span><br><span class="line">const appElement &#x3D; React.createElement(&#39;div&#39;, &#123;class: &#39;app&#39;&#125;, appHeading)</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line"></span><br><span class="line">## 2. 가상 DOM이란?</span><br><span class="line">- 실제 DOM에 직접적으로 조작하는 것이 아니라, 이전&#x2F;이후 상태를 비교하여 변경 사항이 발생할 때 변경된 부분만 실제 DOM에 업데이트(patch)하므로 UI 속도를 향상시킬 수 있다.</span><br><span class="line">- &#96;ReactDom&#96;모듈은 React요소로 구성된 가상 DOM을 실제 DOM에 Mount시켜 렌더링해주는 역할을 수행한다.</span><br><span class="line">    - &#96;ReactDom.render(container, document.getElementById(&#39;root&#39;))&#96;</span><br><span class="line">- 실제 DOM을 사용하는 대표적인 것은 JQuery</span><br><span class="line">- 가상 DOM을 사용하는 것은 React, View 등</span><br><span class="line">- 가상 DOM 사용 이유</span><br><span class="line">    - UI는 사용자의 요구사항에 따라 수시로 변경(업데이트)된다.</span><br><span class="line">    - 업데이트 과정에서 실제 DOM이 변경되면 업데이트 된 요소와 그 자식 요소를 다시 렌더링 해야하는데, 이러한 과정이 UI 속도를 늦춘다.</span><br><span class="line">    - UI 컴포넌트 개수가 많을 수록 렌더링 비용은 더욱 많이 들어 속도는 더더욱 느려지게 된다.(렌더링 비용 UP, 속도 DOWN)</span><br><span class="line"></span><br><span class="line">## 3. JSX 코드가 Babel 컴파일러를 만나면?</span><br><span class="line">- &#96;Babel&#39;s Compile&#96;</span><br><span class="line">     - JSX를 &#96;React.createElement()&#96;를 사용해 컴파일한다.</span><br></pre></td></tr></table></figure>
-// JSX 코드<br>const app = (<div className="app">
-<h1>React App</h1>
-</div>
-)
-
-</li>
-</ul>
-</li>
-</ul>
-<p>// Babel 다음과 같이 컴파일을 함 (React 요소) 가상 DOM을 구성하고 필요에 따라 실제 DOM을 업데이트 한다.<br>const iframeWrapper = React.createElement(<br>    // .iframe-wrapper<br>    ‘div’,<br>    { className: ‘wrapper’ },<br>    // .wrapper &gt; h1<br>    React.createElement(‘h1’, {className: ‘header’})<br>    // …으로 속에 코드들을 늘어남<br>)</p>
-<pre><code>
-## 4. JSX 활용
-### 데이터 바인딩이란?
-- JSX란
-    - JavaScript 표현식을 중괄호(&#123;&#125;)로 묶어 데이터를 바인딩한다.
-    - HTML 코드에서 데이터를 빼내 변수에 등록한 후, 변수를 HTML 코드에 바인딩할 수 있다.
-    - 이때 데이터는 state 영역의 변수 코드이다.
-- - -
-### 콘텐츠 바인딩과 JavaScript 표현식
-- JavaScript 식(Expression)은 항상 값을 반환하므로 &#123;&#125; 안에 바인딩이 가능하다.
-- 중괄호 안에는 문 대신 식을 사용해야한다.
-- - - 
-### 속성 바인딩 (style, className)
-- `state`나 `props`로 속성을 변수에 담아 선언해준다.
-- app 중괄호 안에 속성으로 들어가는 값을 넣어주어야 한다.
-- 대표적으로 style 속성등을 넣어주는데 사용한다.
-- - -
-### 조건 문을 사용한 조건부 렌더링 (if, switch 문)
-- 함수를 생성하여 조건문을 사용해서 처리 후 함수를 렌더링 해주어야 한다.
-- - -
-### 조건 식을 사용한 사용한 조건부 렌더링 (3항식, 논리연산자)
-- 위의 조건문 보다는 조건식은 바인딩 부분에 바로 사용이 가능하다.
-- 조건 식은 속성 바인딩에도 사용이 가능하다.
-- - -
-### Array 객체의 map() 메서드를 활용한 리스트 렌더링
-- `state`나 `props`에 배열로 저장되어있는 값을 렌더링 부분에서 `.map()`매서드를 사용하여 배열을 풀어서 사용할 수 있다.
-
-- - -
-### JSX 사용시 주의할 점
-- `속성이름은 CamelCase로 표기`
-    - JSX는 HTML이 아니라 JavaScript 식이므로 React DOM은 HTML 표준 속성이름 중 일부는 그대로 사용할 수 없다.
-    - 예를 들어
-        - class -&gt; className
-        - tabindex -&gt; tabIndex
-    - 접근성 속성은 하이픈케이스 사용 
-        -  예를 들어 aria-label 과 같은 접근성 속성은 하이픈케이스를 사용한다.
-- `컨텐츠가 없는 요소는 항상 닫아야한다.`
-    - JSX는 XML 문법에 따라 콘텐츠가 없는 빈 요소는 반드시 닫아야한다.
-    - 예를들어
-        - `&lt;img/&gt;`
-        - `&lt;br/&gt;`
-        - `&lt;area/&gt;` 등
-- `루트 요소가 무조건 하나여야 한다.`
-    - 만약 div로 무의미하게 감싸는 것 보다는 `React.Fragment`를 사용하는 것이 효율적이다.</code></pre>
-
+        <h1 id="React-JSX"><a href="#React-JSX" class="headerlink" title="React JSX"></a>React JSX</h1>
     </div>
 
     <div class="about">
@@ -196,7 +132,7 @@
                 
                 <a href="/archives" class="item" target="_blank">Archives</a>
                 
-                <a href="/react" class="item" target="_blank">React</a>
+                <a href="/react/index" class="item" target="_blank">React</a>
                 
                 <a href="/projects" class="item" target="_blank">Projects</a>
                 

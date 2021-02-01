@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>태그: React 기본 - YH&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YH&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YH&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="YH&amp;#96;s Developer Blog"><meta property="og:type" content="blog"><meta property="og:title" content="YH&#039;s BLOG"><meta property="og:url" content="https://youngheakim.github.io/"><meta property="og:site_name" content="YH&#039;s BLOG"><meta property="og:description" content="YH&amp;#96;s Developer Blog"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://youngheakim.github.io/img/og_image.png"><meta property="article:author" content="YoungHeaKim"><meta property="article:tag" content="programming, React"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://youngheakim.github.io"},"headline":"YH's BLOG","image":["https://youngheakim.github.io/img/og_image.png"],"author":{"@type":"Person","name":"YoungHeaKim"},"description":"YH&#96;s Developer Blog"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600&amp;family=Roboto+Mono"><link rel="stylesheet" href="/css/cyberpunk.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="YH&#039;s Blog" height="28"><strong>YH&#039;s Blog</strong></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/YoungHeaKim"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">태그</a></li><li class="is-active"><a href="#" aria-current="page">React 기본</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-01-21T08:11:53.000Z" title="2021. 1. 21. 오후 5:11:53">2021-01-21</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-02-01T09:29:23.054Z" title="2021. 2. 1. 오후 6:29:23">2021-02-01</time>&nbsp;업데이트 됨</span><span class="level-item"> YoungHea Kim </span><span class="level-item"><a class="link-muted" href="/categories/React/">React</a></span><span class="level-item">5분안에 읽기 (약 812 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/react/reactbase/">React Base</a></h1><div class="content"><h1 id="React란"><a href="#React란" class="headerlink" title="React란?"></a>React란?</h1><p>React는 UI를 구현하는 JavaScript 라이브러리로 현 시점에서 전 세계적으로 가장 사용율이 높으며, 웹 앱, 네이티브 모바일 앱(Android, iOS 등) 개발 등 다양한 플랫폼에서 애플리케이션을 제작하는 공통된 핵심 개발 방법을 제공합니다.</p>
+<p>React는 컴포넌트 기반 프로그래밍<br>    - 캡슐화 된 컴포넌트 로직은 템플릿이 아닌 JSX(JavaScript+XML)로 사용가능하다.</p>
+<hr>
+<h1 id="React-시작하기"><a href="#React-시작하기" class="headerlink" title="React 시작하기"></a>React 시작하기</h1><h2 id="React-러닝-다이어그램"><a href="#React-러닝-다이어그램" class="headerlink" title="React 러닝 다이어그램"></a>React 러닝 다이어그램</h2><h3 id="1-공부해야-할-것들"><a href="#1-공부해야-할-것들" class="headerlink" title="1. 공부해야 할 것들"></a>1. 공부해야 할 것들</h3><pre><code>1. ES6+  
+2. 가상 DOM  
+3. 컴포넌트화(내부 JSX)  
+4. 웹 접근성  
+5. 함수 컴포넌트  </code></pre>
+<h3 id="2-React-컴포넌트와-요소"><a href="#2-React-컴포넌트와-요소" class="headerlink" title="2. React 컴포넌트와 요소"></a>2. React 컴포넌트와 요소</h3><h4 id="컴포넌트-요소"><a href="#컴포넌트-요소" class="headerlink" title="컴포넌트 요소"></a>컴포넌트 요소</h4><ul>
+<li>React Component는 설계이다. 설계를 사용해서 인스턴스를 만들어 내는데 이때 component는 객체를 반환해주는데 이때 app이라는 변수에 담아 rendering을 시키면 실제 dom요소에서 해당 아이디를 찾아 화면에 보여주게 된다. <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; React Component (Functional)</span><br><span class="line">function App() &#123;</span><br><span class="line">  return &lt;div&gt;React Element&lt;&#x2F;div&gt;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; React element(JSX)</span><br><span class="line">var app &#x3D; &lt;App&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; ReactDom - rendering</span><br><span class="line">ReactDOM.render(app, document.querySelector(&#39;#app&#39;));</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-React-컴포넌트-구조-이해-및-활용"><a href="#3-React-컴포넌트-구조-이해-및-활용" class="headerlink" title="3. React 컴포넌트 구조 이해 및 활용"></a>3. React 컴포넌트 구조 이해 및 활용</h3><h4 id="네이티브-컴포넌트-vs-커스텀-컴포넌트"><a href="#네이티브-컴포넌트-vs-커스텀-컴포넌트" class="headerlink" title="네이티브 컴포넌트 vs 커스텀 컴포넌트"></a>네이티브 컴포넌트 vs 커스텀 컴포넌트</h4><ul>
+<li>네이티브 컴포넌트를 커스텀 컴포넌트화 하여 중복되는 구조의 함수로 만들어 커스텀하는 요소를 말한다.  </li>
+<li>이때 react에서는 class를 사용할수 없고 className으로 사용해서 요소에 class를 넣어주어야 한다.  </li>
+</ul>
+<h4 id="React-요소"><a href="#React-요소" class="headerlink" title="React 요소"></a>React 요소</h4><ul>
+<li>원하는 함수형 component를 생성하여 html요소처럼 사용이 가능하다.</li>
+</ul>
+<h3 id="4-React-프로젝트-생성-with-CRA-Create-React-App"><a href="#4-React-프로젝트-생성-with-CRA-Create-React-App" class="headerlink" title="4. React 프로젝트 생성 with CRA(Create React App)"></a>4. React 프로젝트 생성 with CRA(Create React App)</h3><ul>
+<li>React 프레임 워크 사용해 개발, 배포시에 워크 플로우<ul>
+<li>개발 단계<ul>
+<li>npm : 모듈관리</li>
+<li>모던 자바스크립트 : ES6</li>
+<li>컴포넌트 시스템 : React</li>
+<li>개발 서버 : Node.js</li>
+<li>애플리케이션 개발</li>
+</ul>
+</li>
+<li>배포 단계<ul>
+<li>webpack :  번들링, 브라우저 호환성, 최적화</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>위와 같은 것을 CRA(Create React App)에서 처리해준다.</li>
+<li><code>npx create-react-app &lt;프로젝트-이름&gt;</code>을 사용하여 CRA를 사용한 폴더를 생성해준다.<ul>
+<li>위의 코드 실행시 다음과 같이 폴더가 생성이 된다. <img src="../../images/CRA.png" alt="CRA 폴더 생성시 사진"></li>
+</ul>
+</li>
+</ul>
+<h3 id="5-React-프로젝트-디렉토리-구조"><a href="#5-React-프로젝트-디렉토리-구조" class="headerlink" title="5. React 프로젝트 디렉토리 구조"></a>5. React 프로젝트 디렉토리 구조</h3><ul>
+<li>구조<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- README.md</span><br><span class="line">- node_modules&#x2F;      -&gt; 개발 의존 모듈 집합 디렉토리</span><br><span class="line">- package.json</span><br><span class="line">- public&#x2F;            -&gt; 정적 리소스 디렉토리 </span><br><span class="line">    - favicon.ico    </span><br><span class="line">    - index.html     -&gt; 애플리케이션 기본 템플릿</span><br><span class="line">    - manifest.json</span><br><span class="line">- src&#x2F;               -&gt; React 애플리케이션 개발 디텍토리</span><br><span class="line">    - App.css</span><br><span class="line">    - App.js         -&gt; 애플리케이션 파일</span><br><span class="line">    - App.test.js</span><br><span class="line">    - index.css</span><br><span class="line">    - index.js       -&gt; 엔트리 파일</span><br><span class="line">    - logo.svg</span><br><span class="line">    - serviceWorker.js</span><br><span class="line">- yarn.lock</span><br></pre></td></tr></table></figure></li>
+<li><code>public/index.html</code><ul>
+<li>React 앱이 구성되는 기본 템플릿 파일이다.</li>
+</ul>
+</li>
+<li><code>src/index.js</code><ul>
+<li>애플리케이션의 엔트리 파일로 애플리케이션을 구성하는 설정이 포함되어 있다.</li>
+<li><code>React</code> : React 모듈 로드</li>
+<li><code>React-dom</code> : React-dom 모듈 로드<ul>
+<li>렌더함수를 사용해 src/index.html 요소를 내부에 동적으로 App 컴포넌트를 랜더링한다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>src/App.js</code><ul>
+<li>실질적인 React 앱에 대한 요소</li>
+<li>함수형 컴포넌트를 <code>export default</code>로 내보낸다.</li>
+</ul>
+</li>
+</ul>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.svg" alt="YoungHeaKim"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoungHeaKim</p><p class="is-size-6 is-block">용해의 개발 블로그</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>한국</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">9</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/YoungHeaKim" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/YoungHeaKim"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://www.facebook.com/younghea.kim.96/"><i class="fab fa-facebook"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/React/"><span class="level-start"><span class="level-item">React</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="YH&#039;s Blog" height="28"><strong>YH&#039;s Blog</strong></a><p class="is-size-7"><span>&copy; 2021 YoungHeaKim</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/YoungHeaKim"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>

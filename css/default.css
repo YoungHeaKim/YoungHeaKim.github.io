@@ -10735,6 +10735,9 @@ body > .section {
   color: #3273dc !important;
 }
 .image.is-7by3 {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
   padding-top: 42.8%;
 }
 .image.is-7by3 img {
@@ -10767,6 +10770,7 @@ body > .section {
   margin-top: 1.5rem;
 }
 .card .card-image {
+  background-color: #000;
   overflow: hidden;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
